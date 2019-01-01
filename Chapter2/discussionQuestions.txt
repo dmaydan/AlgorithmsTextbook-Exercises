@@ -1,0 +1,39 @@
+Give the Big-O performance of each of the following code fragments:
+
+1. 
+for i in range(n):
+   for j in range(n):
+      k = 2 + 2
+
+The basic step unit is the assignment. The inner loop performs the step n times. The inner looop is performed for each iteration of the outer loop which iterates also n times. Therefore, the basic unit step is performed n squared times. T(n) = n squared where n is the size of the output array. Therefore, the Big-O is O(n squared)
+
+2.
+for i in range(n):
+     k = 2 + 2
+
+The basic step unit is the assignment statement. The loop iterates n times, thereby performing the assigment n times. This connotes a Big-O of O(n).
+
+3.
+i = n
+while i > 0:
+   k = 2 + 2
+   i = i // 2
+
+The counter is divided by 2 over and over again until it reaches 1. The divison after of 1 by 2 results in .5 -> 0 so that does not create an iteration. However, the loop does run once before any divisons. We know that log2N represents dividing n by 2 until it reaches 1. Our function does this, but also includes and additional loop iteration. Therefore, T(N) = log2N + 1. The Big-O is O(log n).
+
+4.
+for i in range(n):
+   for j in range(n):
+      for k in range(n):
+         k = 2 + 2
+Each loop iterates n times --> T(n) = n cubed. Therefore, the Big-O of this function is O(n cubed)
+
+5.
+for i in range(n):
+   k = 2 + 2
+for j in range(n):
+   k = 2 + 2
+for k in range(n):
+   k = 2 + 2
+
+Even though the number of steps is represented by the function T(n) = 3n, the Big-O approximation is O(n) since coefficients are discarded.
