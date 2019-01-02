@@ -1,4 +1,4 @@
-Convert the following values to binary using "divide by 2." Show the stack of remainders.
+Problem: Convert the following values to binary using "divide by 2." Show the stack of remainders.
 	1. Decimal: 17
 		17/2 = 8 R1
 		8/2 = 4 R0
@@ -45,7 +45,7 @@ Convert the following values to binary using "divide by 2." Show the stack of re
 		0
 		Binary: 1100000
 
-Convert the following infix expression to prefix/postfix. (full parentheses method)
+Problem: Convert the following infix expression to prefix/postfix. (full parentheses method)
 1. (A+B)*(C+D)*(E+F) --> (((A+B)*(C+D))*(E+F)) 
 	Prefix: **+AB+CD+EF
 	Postfix: AB+CD+*EF+* 
@@ -56,7 +56,7 @@ Convert the following infix expression to prefix/postfix. (full parentheses meth
 	Prefix: ++***ABCDEF
 	Postfix: AB*C*D*E+F+
 
-Convert the above infix expressions to postfix using the direct conversion algorithm. Show the stack as the conversion takes place. 
+Problem: Convert the above infix expressions to postfix using the direct conversion algorithm. Show the stack as the conversion takes place. 
 	1. (A+B)*(C+D)*(E+F)
 		Step 1:
 		Stack: 
@@ -144,7 +144,7 @@ Convert the above infix expressions to postfix using the direct conversion algor
 		Output: AB+CD+*EF+*
 	Note: I will not perform the algorithm on the other 2 infix expressions because that is just tedious, and I already understand it.
 
-Evaluate the following postfix expressions. Show the stack as each operand and operator is processed.
+Problem: Evaluate the following postfix expressions. Show the stack as each operand and operator is processed.
 	1. 2 3 * 4 +
 		Step 1:
 		Stack:
@@ -165,19 +165,18 @@ Evaluate the following postfix expressions. Show the stack as each operand and o
 		10
 	Note: I will not perform the algorithm on the other 2 postfix expressions because that is just tedious, and I already understand it.
 
-The alternative implementation of the Queue ADT is to use a list such that the rear of the queue is at the end of the list. What would this mean for Big-O performance?
+Problem: The alternative implementation of the Queue ADT is to use a list such that the rear of the queue is at the end of the list. What would this mean for Big-O performance?
+
 In the other implementation of the queue, enqueue was O(n) and dequeue was O(1). In this implementation, enqueue is O(1) and dequeue is O(n).
 
-What is the result of carrying out both steps of the linked list add method in reverse order? What kind of reference results? What types of problems may result?
+Problem: What is the result of carrying out both steps of the linked list add method in reverse order? What kind of reference results? What types of problems may result?
 
 The two steps of the linked list add method are setting the next reference of the new node to the current head node and then reassigning the head reference to the new node. If we were to reverse these two steps, we would would first reassign the self.head reference to the node. However, once we do that, we no longer have a reference to the old head of the list so there is no way for us to set the next node reference of our head to the old front node. When we run temp.setNext(self.head) after already setting self.head = temp, we are assigning the next reference of the temp node to self.head. However, since self.head is pointing at the same object as temp, what you are really doing is giving the head node a reference to itself within the next attribute. 
 
-Explain how the linked list remove method works when the item to be removed is in the last node.
+Problem: Explain how the linked list remove method works when the item to be removed is in the last node.
 
 When the item to be removed is in the last node, the previous node's (2nd to last node) next reference is set to the last node's next reference which is None. Thereby, the previous node becomes the last node.
 
-Explain how the remove method works when the item is on the only node in the linked list.
+Problem: Explain how the remove method works when the item is on the only node in the linked list.
 
 Since there is no previous node when the item we are looking for is the only node in the list, we set the self.head reference to the node's next reference. Since the node's next reference is None (it is the only node in the list), the head refers to None.
-
-
