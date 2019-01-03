@@ -1,4 +1,4 @@
-# IMPLEMENT A STACK USING LINKED LISTS
+# IMPLEMENT A QUEUE USING LINKED LISTS
 class Queue:
 	def __init__(self):
 		# Head of linked list is rear/tail is front
