@@ -28,9 +28,7 @@ def dp_knapsack_solver(W, weightToValue):
 				valuesUsed[weight].append(itemUsed)
 			else:
 				valuesUsed[weight] = valuesUsed[weight - 1][:]
-		if weight == 10:
-			print(valuesUsed[weight])
-	return maxProfitByWeight
+	return valuesUsed[weight]
 print(dp_knapsack_solver(20, {2:3, 3:4,4:8,5:8,9:10}))
 # THE WEIGHTS MUST BE UNIQUE BECAUSE I AM USING THEM TO IDENTIFY ITEMS AND DETERMINE UNIQUENESS (AVOID DUPLICATES)
 # THIS CAN BE EASILY FIXED BY CREATING AN ITEM CLASS AND IDENTIFYING ITEMS IN SUCH A WAY
