@@ -4,7 +4,17 @@ class BinHeap:
         self.heapList = [0]
         self.currentSize = 0
         self.limit = limit
-    
+    def dropExtra(self):
+      lowestPriority = None
+      lowestPriorityIndex = None
+      for i in range(1, len(self.heapList)):
+        if not lowestPriority or self.heapList[i] > lowestPriority:
+          lowestPriority = self.heapList[i]
+          lowestPriorityIndex = i
+      self.currentSize -= 1
+      self.heapList[lowestPriorityIndex] = self.heapList[-1]
+      self.heapList.pop()
+      self.percDown(lowestPriorityIndex)
     def percUp(self,i):
         while i // 2 > 0:
           if self.heapList[i] < self.heapList[i // 2]:
@@ -19,17 +29,6 @@ class BinHeap:
       self.percUp(self.currentSize)
       if self.currentSize > self.limit:
       	self.dropExtra()
-    def dropExtra(self):
-      lowestPriority = None
-      lowestPriorityIndex = None
-      for i in range(1, len(self.heapList)):
-        if not lowestPriority or self.heapList[i] > lowestPriority:
-          lowestPriority = self.heapList[i]
-          lowestPriorityIndex = i
-      self.currentSize -= 1
-      self.heapList[lowestPriorityIndex] = self.heapList[-1]
-      self.heapList.pop()
-      self.percDown(lowestPriorityIndex)
 
 
     def percDown(self,i):
