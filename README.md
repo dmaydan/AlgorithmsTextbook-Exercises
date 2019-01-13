@@ -8,3 +8,4 @@ Some of the more interesting exercises are:
 3. [Chapter 4 > Exercise 9 and 10 - Jug Problem](Chapter4/exercise9+10.py)
 4. [Chapter 4 > Exercise 14 - Knapsack Problem Dynamic Programming](Chapter4/exercise14.py)
 5. [Chapter 5 > Exercise 4 through 8 - Complete Implementation of Map ADT as a Hash Table](Chapter5/exercise45678.py)
+6. [Chapter 6 > Exercise 6 - Binary Heap with Limited Heap Size](Chapter6/exercise6.py)
