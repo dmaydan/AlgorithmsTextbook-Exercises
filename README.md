@@ -7,4 +7,4 @@ Some of the more interesting exercises are:
 2. [Chapter 3 > Exercise 13 through 19 - Complete Implementation of Linked List ADT](Chapter3/exercise13To19.py)
 3. [Chapter 4 > Exercise 9 and 10 - Jug Problem](Chapter4/exercise9+10.py)
 4. [Chapter 4 > Exercise 14 - Knapsack Problem Dynamic Programming](Chapter4/exercise14.py)
-5. [Chapter 5 > Exercise 4 through 8 - Complete Implementation of Map ADT](Chapter5/exercise45678.py)
+5. [Chapter 5 > Exercise 4 through 8 - Complete Implementation of Map ADT as a Hash Table](Chapter5/exercise45678.py)
